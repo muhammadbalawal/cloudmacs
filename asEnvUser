@@ -1,6 +1,17 @@
 #!/bin/bash
 set -eux
 
+
+# Ensure environment variables are set
+UNAME=${UNAME:-emacs}
+GNAME=${GNAME:-emacs}
+UHOME=${UHOME:-/home/emacs}
+EMACS_UID=${EMACS_UID:-1000}
+EMACS_GID=${EMACS_GID:-1000}
+WORKSPACE=${WORKSPACE:-/mnt/workspace}
+SHELL=${SHELL:-/bin/bash}
+
+
 # borrowed from https://github.com/JAremko/docker-emacs
 
 ## Create(if needed) this user and run command as the user:
